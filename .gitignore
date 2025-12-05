@@ -45,7 +45,6 @@ Thumbs.db
 *.crt
 
 # Misc
-uploads/
 Miniconda3-latest-Linux-x86_64.sh
 .vscode-server/
 .cache/
@@ -60,3 +59,4 @@ Miniconda3-latest-Linux-x86_64.sh
 .bash_history
 .bash_logout
 .bashrc
+abv-legacy/
