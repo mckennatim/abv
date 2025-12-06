@@ -1,0 +1,126 @@
+body {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: clamp(0.9rem, 2.2vw, 1rem);
+	background-color: rgb(255, 204, 153);
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+.head img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+h4 {
+    font-size: clamp(0.6rem, 1.6vw, 2.0rem);
+    font-weight: bold;
+    color: #333;
+    max-width: 90%;
+    line-height: clamp(1.4, 1.5vw, 1.7);
+    margin-bottom: clamp(0.5rem, 1vw, 0.6rem);
+
+}
+h3 {
+    font-size: clamp(0.8rem, 1.9vw, 2.5rem);
+    font-weight: bold;
+    color: #333;
+    max-width: 90%;
+    line-height: clamp(1.4, 1.5vw, 1.7);
+    margin-bottom: 0;
+
+}
+h3 +p {
+    margin-top: 0;
+}
+
+p {
+    font-size: clamp(0.85rem, 1.4vw, 1.5rem);
+    text-align: justify;
+    line-height: clamp(1.1, 1.5vw, 1.7)
+}
+
+li {
+    font-size: clamp(0.9rem, 1.0vw, 1.2rem);
+    font-style: italic;
+    line-height: clamp(1.4, 1.6vw, 1.7);
+    margin-bottom: clamp(0.3rem, 1vw, 0.6rem);
+}
+.centitle {
+    text-align: center;
+} 
+
+.generated{
+    font-size: 12px
+}
+
+ol li{
+    font-size: clamp(0.8rem, 1.4vw, 1.7rem);
+}
+img {
+    width: clamp(100px, 35vw, 250px);  /* Min 200px, scales with viewport, max 600px */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;
+    margin: 0 auto;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margins: 0;
+}
+
+.address, .org-name, .town, .phone, .website {
+    margin: 0;
+    font-size: clamp(0.7rem, 1.2vw, 1.0rem);
+
+}
+
+.org-name {
+    font-weight: bold;
+}
+
+.songlist {
+    margin-left: 10%; /* 10% from left edge on large screens */
+    width: fit-content;
+}
+
+/* Small screen: move to left edge */
+@media (max-width: 768px) {
+    .songlist {
+        margin-left: 0; /* Flush left on small screens */
+    }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;  /* Stack logo and title */
+    }
+
+    .sidebar {
+        display: none;  /* Hide sidebar */
+    }
+
+    .main-content {
+        padding: 1rem;  /* Less padding on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-table {
+        font-size: 0.8rem;  /* Exception: very specific table sizing */
+    }
+
+    .nav-menu {
+        position: fixed;  /* Different positioning */
+        bottom: 0;
+    }
+}

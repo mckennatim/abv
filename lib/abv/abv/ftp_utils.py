@@ -421,3 +421,25 @@ def upload_cleaned_file(source_path, target_dir, link_path):
 
     message = upload_afile(local_path, remote_path)
     return message, result   
+
+
+def download_ftp_dir(remote_dir, local_dir):
+  HOST = "ftp.abvchorus.org"
+  USERNAME = "abvch0" 
+  PASSWORD = "abeserevelt10"
+  message = ""
+  ftp = ftplib.FTP(HOST)
+  ftp.login(USERNAME, PASSWORD)
+  os.makedirs(local_dir, exist_ok=True)
+  ftp.cwd(remote_dir)
+  items = ftp.nlst()
+  for item in items:
+    try:
+      ftp.cwd(item)  # Try to change to directory
+      # If successful, it's a directory
+      ftp.cwd('..')  # Go back up
+      download_ftp_dir(item, os.path.join(local_dir, item))
+    except ftplib.error_perm:
+      # Not a directory, download file
+      with open(os.path.join(local_dir, item), 'wb') as f:
+          ftp.retrbinary('RETR ' + item, f.write)
