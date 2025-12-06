@@ -108,3 +108,21 @@ conda info --envs
 ## nginx mods for localhost (see /home/setup.md or)
 
 sudo chown -R $USER:www-data /home/abv/public_html
+
+## server setup
+### Localhost, and its pushed repo in github are the source of truth. The server pulls form there to be updated. Do not update on the server
+### git
+```bash
+cd /path/to/existing-directory
+git remote add origin https://github.com/mckennatim/abv.git
+git fetch origin
+git checkout -t origin/main
+```
+if you have added untracked foiles to the remote server, delete them or cut them to localhost otherwise checkout will balk
+
+Once you have done some development on localhost and want to update the server
+
+```bash
+git pull origin main
+```
+abv-legacy is on localhost/admin/ There is no real reason to have it on the production server
