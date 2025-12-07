@@ -109,7 +109,7 @@ conda info --envs
 
 sudo chown -R $USER:www-data /home/abv/public_html
 
-## server setup
+## git server update (to be decided)
 ### Localhost, and its pushed repo in github are the source of truth. The server pulls form there to be updated. Do not update on the server
 ### git
 ```bash
@@ -126,3 +126,11 @@ Once you have done some development on localhost and want to update the server
 git pull origin main
 ```
 abv-legacy is on localhost/admin/ There is no real reason to have it on the production server
+
+## rsync server update
+
+Write scripts to update the site. Resources and html get udpdated.
+
+How does that impact branch update
+
+If you choose to use rsync to update the production server, is it possible to switch to a beta  git branch on loclahost, then run an rysnc script to update a beta site
