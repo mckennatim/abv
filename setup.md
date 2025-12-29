@@ -134,3 +134,11 @@ Write scripts to update the site. Resources and html get udpdated.
 How does that impact branch update
 
 If you choose to use rsync to update the production server, is it possible to switch to a beta  git branch on loclahost, then run an rysnc script to update a beta site
+
+### rsync html
+```bash
+rsync -avz abv@abvchorus.org:/home/abv/public_html/*.html /home/abv/public_html/
+
+# from localhost to server - assets
+rsync -avz html /home/abv/public_html/assets  abv@abvchorus.org:/home/abv/public_html/
+```

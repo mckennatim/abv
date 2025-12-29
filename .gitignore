@@ -61,3 +61,8 @@ Miniconda3-latest-Linux-x86_64.sh
 .bashrc
 abv-legacy/
 resources/
+
+# static files
+public_html/*.html
+public_html/resources/
+public_html/assets/

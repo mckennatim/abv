@@ -755,4 +755,20 @@ sudo netstat -tulpn | grep :5000
 sudo netstat -tulpn | grep :80
 ```
 
-d
+what would the command be to rsync from abv@abvchorus.org /home/abv/public_html/*.html to localhost /home/abv/public_html
+
+```bash
+rsync -avz abv@abvchorus.org:/home/abv/public_html/*.html /home/abv/public_html/
+```
+
+if you push to github a repository with a .gitignore, when you pull it from github to the server, will it honor that .gitignore -ans:NO
+
+How would I modify or recreate a repository on localhost so that when it is pulled to the production server, it will not pull and overwrite the files/folders listed in the .gitignore
+
+What would that git rm command look like if I no longer wanted to track
+
+public_html/*.html
+public_html/resources/
+public_html/assets/
+
+what do you need in rsnc so that it deletes files/folders on the destination that no longer exist in the source

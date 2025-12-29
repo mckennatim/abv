@@ -13,10 +13,18 @@ You are right, hostpapa is the registrar for abvchorus.org. I 'chatted' with the
 It is probably easiest to do it through chat on the domains page https://www.hostpapa.com/domains/
 
 Paste this in chat box...
+```
+Please redirect abvchorus.org to 107.172.72.246. Also please add the the fiollowing subdomains to the domain record
+* alpha.abvchorus.org 
+* beta.abvchorus.org 
+* blog.abvchorus.org
+* circleboston.abvchorus.org 
+* forum.abvchorus.org 
+* yiddish.abvchorus.org
+```
+I am happy to be on zoom with you when you do this. Otherwise:
 
-        "Please redirect abvchorus.org to 107.172.72.246. Also please add the subdomains alpha.abvchorus.org and beta.abvchorus.org.org to the domain record."
-
-Let me know how this goes and when you did it. I have to make server changes as soon as the redirection takes effect. The site might be down for a little bit until the new secure letsencrypt certificate is active. 
+Let me know how this goes and when you did it. I have to make server changes as soon as the redirection takes effect, 1-4 hours after you make the change. The site might be down for a little bit until the new secure letsencrypt certificate is active.  
 
 Thanks
 
